@@ -1,0 +1,100 @@
+// @import url("./_variables");
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+
+  ul {
+    list-style: none;
+  }
+
+  .footerContent {
+    width: 100%;
+    max-width: 1175px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .footerUpper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e85d04;
+
+    .logo {
+      height: auto;
+      min-height: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .social ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        li a .socialImg {
+          height: 2rem;
+          width: 2rem;
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+  }
+
+  .disclosureNote {
+    color: rgb(211, 211, 211);
+  }
+
+  .copyright {
+    margin-top: 1rem;
+  }
+
+  .disclosure {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+.footer .jeg_menu_footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  li {
+    padding-right: 10px;
+    a {
+      text-decoration: none;
+      color: aliceblue;
+      transition: all 100ms ease-in-out;
+      &:hover {
+        color: #e85d04;
+      }
+    }
+  }
+}
+#face-icon {
+  color: aliceblue !important;
+}
