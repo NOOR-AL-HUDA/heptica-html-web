@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node
 social.txt
 
@@ -6,4 +7,14 @@ extra.html
 old
 /old/*
 
+=======
+node
+social.txt
+
+extra.html
+
+old
+/old/*
+
+>>>>>>> 257af18d0dbeed7ca287683ae098ef761345db65
 /leagueoflegend/0000-old-articles

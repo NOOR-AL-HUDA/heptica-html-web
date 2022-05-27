@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 a {
   text-decoration: none;
 }
@@ -371,3 +372,378 @@ a {
     }
   }
 }
+=======
+a {
+  text-decoration: none;
+}
+
+// * main screen
+
+.main-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content-inner {
+  width: 100%;
+  max-width: 1175px;
+  height: auto;
+  min-height: 100vh;
+}
+
+.main-screen {
+  width: 100%;
+  height: auto;
+  min-height: 60vh;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1175px;
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    > div {
+      padding: 1rem;
+      width: fit-content;
+      height: fit-content;
+      transition: all 200ms ease-in-out;
+
+      p {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        text-transform: capitalize;
+        color: yellow;
+      }
+      h4 {
+        padding: 0.5rem 0;
+        margin: 0;
+        text-transform: capitalize;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.21);
+      div {
+        transform: translateY(-4px);
+        h4 {
+          color: #e85d04;
+        }
+      }
+    }
+  }
+
+  h4 {
+    color: aliceblue;
+    font-weight: 600;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+  }
+}
+
+.main-article {
+  width: 65%;
+  height: 60vh;
+  cursor: pointer;
+  a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+}
+
+.secondary-articles {
+  width: 35%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: center;
+
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+.sec-article-1 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.sec-article-2 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+// media query
+@media (max-width: 679px) {
+  .main-screen {
+    flex-direction: column;
+    padding-top: 1rem;
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    .main-article {
+      width: 100%;
+      height: 18rem;
+    }
+
+    .secondary-articles {
+      width: 100%;
+      height: 36rem; // .main-article height * 2 (because it contains two articles)
+    }
+  }
+}
+
+// * poplar article screen
+.popular-articles-screen {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+
+  .particle-box {
+    width: 99%;
+    height: auto;
+    border-radius: 6px;
+    transition: all 200ms ease-in-out;
+
+    .particle-image {
+      width: 100%;
+      height: 14rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .particle-detail {
+      padding-top: 1rem;
+      p {
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        color: yellow;
+      }
+      h4 {
+        margin: 0;
+        padding: 6px 0;
+        color: #e85d04;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.21);
+      .particle-detail {
+        h4 {
+          color: aliceblue;
+        }
+      }
+    }
+  }
+}
+
+// media query
+@media (max-width: 900px) {
+  .popular-articles-screen {
+    grid-template-columns: 1fr 1fr;
+    .particle-detail h4 {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-articles-screen {
+    grid-template-columns: 1fr;
+  }
+}
+
+// * featured article screen
+.featured-articles-screen {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 2rem 0 6rem 0;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+
+  .particle-box {
+    width: 99%;
+    height: auto;
+    border-radius: 6px;
+    transition: all 200ms ease-in-out;
+
+    .particle-image {
+      width: 100%;
+      height: 14rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .particle-detail {
+      padding-top: 1rem;
+      p {
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        color: yellow;
+      }
+      h4 {
+        margin: 0;
+        padding: 6px 0;
+        color: #e85d04;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.21);
+      .particle-detail {
+        h4 {
+          color: aliceblue;
+        }
+      }
+    }
+  }
+}
+
+// media query
+@media (max-width: 900px) {
+  .featured-articles-screen {
+    grid-template-columns: 1fr 1fr;
+    .particle-detail h4 {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-articles-screen {
+    grid-template-columns: 1fr;
+  }
+}
+
+//
+// * League of legends Index Page Styling
+//
+
+.lol-main-article {
+  width: 100%;
+  max-width: 1170px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem 0;
+  transition: all 500ms ease-in-out;
+
+  a {
+    width: 100%;
+    max-width: 1170px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .lol-main-article-image {
+    width: 100%;
+    max-width: 1170px;
+    height: 580px;
+  }
+  .lol-main-article-detail {
+    width: 100%;
+    max-width: 1170px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    h4 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+      margin: 0;
+      padding: 5px 0;
+      text-transform: capitalize;
+      transition: all 200ms ease-in-out;
+    }
+    p {
+      font-size: 1.2rem;
+      color: yellow;
+      margin: 0;
+      padding: 5px 0;
+    }
+  }
+
+  :hover {
+    background-color: rgba(0, 0, 0, 0.21);
+    .lol-main-article-detail {
+      h4 {
+        color: #e85d04;
+      }
+    }
+  }
+}
+
+// media query
+@media (max-width: 900px) {
+  .lol-main-article {
+    .lol-main-article-image {
+      height: 380px;
+    }
+    .lol-main-article-detail {
+      padding: 10px 0;
+      h4 {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// media query
+@media (max-width: 480px) {
+  .lol-main-article {
+    .lol-main-article-image {
+      height: 300px;
+    }
+    .lol-main-article-detail {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}
+>>>>>>> 257af18d0dbeed7ca287683ae098ef761345db65

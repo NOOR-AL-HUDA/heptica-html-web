@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 User-agent: *
 Disallow: /wp-admin/
 Allow: /ads.txt
+=======
+User-agent: *
+Disallow: /wp-admin/
+Allow: /ads.txt
+>>>>>>> 257af18d0dbeed7ca287683ae098ef761345db65
 Allow: /wp-admin/admin-ajax.php

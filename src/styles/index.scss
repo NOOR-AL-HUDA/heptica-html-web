@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 body {
   background-color: #14141b;
@@ -69,3 +70,76 @@ textarea,
 .g1-dropable .g1-drop-toggle {
   display: none !important;
 }
+=======
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+body {
+  background-color: #14141b;
+  font-family: "Roboto", sans-serif;
+}
+
+.divider {
+  width: 100%;
+  height: 25px;
+  border-bottom: 1px solid #e7e6e64b;
+  margin: 3rem 0 1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+  span {
+    text-transform: uppercase;
+    color: #e85d04;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 4.55rem;
+      height: 2px;
+      margin-top: 6px;
+      background-color: #e85d04;
+      z-index: 100;
+    }
+  }
+}
+
+.divider.featured span {
+  &::after {
+    width: 5.1rem;
+  }
+}
+
+// * comments
+.jnews_comment_container {
+  display: none !important;
+}
+
+// * old footer
+.footer-holder {
+  display: none !important;
+}
+
+// * adds
+.jeg_add,
+.adthrive-ad {
+  display: none !important;
+}
+
+// * old share btn/div
+.jeg_share_top_container {
+  display: none !important;
+}
+
+// forms
+form,
+input,
+textarea,
+.search-submit {
+  display: none !important;
+}
+
+// little search button
+.g1-dropable .g1-drop-toggle {
+  display: none !important;
+}
+>>>>>>> 257af18d0dbeed7ca287683ae098ef761345db65
