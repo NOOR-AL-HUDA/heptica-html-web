@@ -1,0 +1,995 @@
+<!DOCTYPE html><html class="no-js g1-off-outside" lang="en-US"><head><meta charset="UTF-8">
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;__ez.queue=(function(){var count=0,incr=0,items=[],timeDelayFired=false,hpItems=[],lpItems=[],allowLoad=true;var obj={func:function(name,funcName,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError){var self=this;this.name=name;this.funcName=funcName;this.parameters=parameters===null?null:(parameters instanceof Array)?parameters:[parameters];this.isBlock=isBlock;this.blockedBy=blockedBy;this.deleteWhenComplete=deleteWhenComplete;this.isError=false;this.isComplete=false;this.isInitialized=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){log("... func = "+name);self.isInitialized=true;self.isComplete=true;log("... func.apply: "+name);var funcs=self.funcName.split('.');var func=null;if(funcs.length>3){}else if(funcs.length===3){func=window[funcs[0]][funcs[1]][funcs[2]];}else if(funcs.length===2){func=window[funcs[0]][funcs[1]];}else{func=window[self.funcName];}
+if(typeof func!=='undefined'&&func!==null){func.apply(null,this.parameters);}
+if(self.deleteWhenComplete===true)delete items[name];if(self.isBlock===true){log("----- F'D: "+self.name);processAll();}}},file:function(name,path,isBlock,blockedBy,async,defer,proceedIfError){var self=this;this.name=name;this.path=path;this.async=async;this.defer=defer;this.isBlock=isBlock;this.blockedBy=blockedBy;this.isInitialized=false;this.isError=false;this.isComplete=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){self.isInitialized=true;log("... file = "+name);var scr=document.createElement('script');scr.src=path;if(async===true)scr.async=true;else if(defer===true)scr.defer=true;scr.onerror=function(){log("----- ERR'D: "+self.name);self.isError=true;if(self.isBlock===true){processAll();}};scr.onreadystatechange=scr.onload=function(){var state=scr.readyState;log("----- F'D: "+self.name);if((!state||/loaded|complete/.test(state))){self.isComplete=true;if(self.isBlock===true){processAll();}}};document.getElementsByTagName('head')[0].appendChild(scr);}}};function init(){window.addEventListener("load",function(){setTimeout(function(){timeDelayFired=true;log('TDELAY -----');processAll();},5000);},false);}
+function addFile(name,path,isBlock,blockedBy,async,defer,proceedIfError,priority){var item=new obj.file(name,path,isBlock,blockedBy,async,defer,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function setallowLoad(settobool){allowLoad=settobool}
+function addFunc(name,func,parameters,isBlock,blockedBy,autoInc,deleteWhenComplete,proceedIfError,priority){if(autoInc===true)name=name+"_"+incr++;var item=new obj.func(name,func,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFile(name,path){var item=new obj.file(name,path,false,[],false,false,true);item.isTimeDelay=true;log(name+' ... '+' FILE! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFunc(name,func,parameters){var item=new obj.func(name,func,parameters,false,[],true,true);item.isTimeDelay=true;log(name+' ... '+' FUNCTION! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function checkIfBlocked(item){if(isBlocked(item)===true||allowLoad==false)return;item.process();}
+function isBlocked(item){if(item.isTimeDelay===true&&timeDelayFired===false){log(item.name+" blocked = TIME DELAY!");return true;}
+if(item.blockedBy instanceof Array){for(var i=0;i<item.blockedBy.length;i++){var block=item.blockedBy[i];if(items.hasOwnProperty(block)===false){log(item.name+" blocked = "+block);return true;}else if(item.proceedIfError===true&&items[block].isError===true){return false;}else if(items[block].isComplete===false){log(item.name+" blocked = "+block);return true;}}}
+return false;}
+function log(msg){var href=window.location.href;var reg=new RegExp('[?&]ezq=([^&#]*)','i');var string=reg.exec(href);var res=string?string[1]:null;if(res==="1")console.debug(msg);}
+function processAll(){count++;if(count>200)return;log("let's go");processItems(hpItems);processItems(lpItems);}
+function processItems(list){for(var i in list){if(list.hasOwnProperty(i)===false)continue;var item=list[i];if(item.isComplete===true||isBlocked(item)||item.isInitialized===true||item.isError===true){if(item.isError===true){log(item.name+': error')}else if(item.isComplete===true){log(item.name+': complete already')}else if(item.isInitialized===true){log(item.name+': initialized already')}}else{item.process();}}}
+init();return{addFile:addFile,addDelayFile:addTimeDelayFile,addFunc:addFunc,addDelayFunc:addTimeDelayFunc,items:items,processAll:processAll,setallowLoad:setallowLoad};})();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=191-0&cb=1', false, [], true, false, true, false);__ez.dot={};__ez.queue.addFile('/detroitchicago/memphis.js', '/detroitchicago/memphis.js?gcb=191-0&cb=2', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/minneapolis.js', '/detroitchicago/minneapolis.js?gcb=191-0&cb=1', false, [], true, false, true, false);__ez.vep=(function(){var pixels=[],pxURL="/detroitchicago/grapefruit.gif";function AddPixel(vID,pixelData){if(__ez.dot.isDefined(vID)&&__ez.dot.isValid(pixelData)){pixels.push({type:'video',video_impression_id:vID,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(pixelData)});}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender"){return;}
+if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
+var pushPixels=pixels.splice(0,j);(new Image()).src=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&v="+btoa(JSON.stringify(pushPixels));}}
+pixels=[];}
+return{Add:AddPixel,Fire:Fire};})();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.pel=(function(){var pixels=[],pxURL="/porpoiseant/army.gif";function AddAndFirePixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0);Fire();}
+function AddAndFireOrigPixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0,true);Fire();}
+function GetCurrentPixels(){return pixels;}
+function AddPixel(adSlot,pixelData,revenue,est_revenue,bid_floor_filled,bid_floor_prev,stat_source_id,isOrig){if(!__ez.dot.isDefined(adSlot)||__ez.dot.isAnyDefined(adSlot.getSlotElementId,adSlot.ElementId)==false){return;}
+var ad_position_id=parseInt(__ez.dot.getTargeting(adSlot,'ap'));var impId=__ez.dot.getSlotIID(adSlot),adUnit=__ez.dot.getAdUnit(adSlot,isOrig);var compId=parseInt(__ez.dot.getTargeting(adSlot,"compid"));var lineItemId=0;var creativeId=0;var ezimData=getEzimData(adSlot);if(typeof ezimData=='object'){if(ezimData.creative_id!==undefined){creativeId=ezimData.creative_id;}
+if(ezimData.line_item_id!==undefined){lineItemId=ezimData.line_item_id;}}
+if(__ez.dot.isDefined(impId,adUnit)&&__ez.dot.isValid(pixelData)){pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),revenue:revenue,est_revenue:est_revenue,ad_position:ad_position_id,ad_size:"",bid_floor_filled:bid_floor_filled,bid_floor_prev:bid_floor_prev,stat_source_id:stat_source_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:compId,line_item_id:lineItemId,creative_id:creativeId,data:__ez.dot.dataToStr(pixelData),is_orig:isOrig||__ez.template.isOrig,});}}
+function AddPixelById(impFullId,pixelData,isOrig){var vals=impFullId.split('/');if(__ez.dot.isDefined(impFullId)&&vals.length===3&&__ez.dot.isValid(pixelData)){var adUnit=vals[0],impId=vals[2];pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(pixelData),is_orig:isOrig||__ez.template.isOrig});}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender")return;if(__ez.dot.isDefined(pixels)&&pixels.length>0){var allPixels=[pixels.filter(pixel=>pixel.is_orig),pixels.filter(pixel=>!pixel.is_orig)];allPixels.forEach(pixels=>{while(pixels.length>0){var isOrig=pixels[0].is_orig||false;var j=5;if(j>pixels.length){j=pixels.length;}
+var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(isOrig===true?1:0)+"&sts="+btoa(JSON.stringify(pushPixels));if(typeof window.isAmp!=='undefined'&&isAmp&&typeof window._ezaq!=='undefined'&&_ezaq.hasOwnProperty("domain_id")){pixelURL+="&visit_uuid="+_ezaq['visit_uuid'];}
+(new Image()).src=pixelURL;}})}
+pixels=[];}
+function getEzimData(adSlot){if(typeof _ezim_d=="undefined"){return false}
+var adUnitName=__ez.dot.getAdUnitPath(adSlot).split('/').pop();if(typeof _ezim_d==='object'&&_ezim_d.hasOwnProperty(adUnitName)){return _ezim_d[adUnitName];}
+for(var ezimKey in _ezim_d){if(ezimKey.split('/').pop()===adUnitName){return _ezim_d[ezimKey];}}
+return false;}
+return{Add:AddPixel,AddAndFire:AddAndFirePixel,AddAndFireOrig:AddAndFireOrigPixel,AddById:AddPixelById,Fire:Fire,GetPixels:GetCurrentPixels,};})();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=191-0&cb=2', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=191-0&cb=1', false, [], true, false, true, false);</script>
+<script data-ezscrex="false" data-cfasync="false">(function(){if("function"===typeof window.CustomEvent)return!1;window.CustomEvent=function(c,a){a=a||{bubbles:!1,cancelable:!1,detail:null};var b=document.createEvent("CustomEvent");b.initCustomEvent(c,a.bubbles,a.cancelable,a.detail);return b}})();</script><script data-ezscrex="false" data-cfasync="false">__ez.queue.addFile('/detroitchicago/tulsa.js', '/detroitchicago/tulsa.js?gcb=191-0&cb=2', false, [], true, false, true, false);</script>
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://egamesconsult.com/xmlrpc.php">
+<title>5 Best Mid Lane Champions in League of Legends Patch 10.19</title><link rel="stylesheet" href="/leagueoflegend/wp-content/cache/min/1/adfa4e5f994fb57130c1c46f8d58cea1.css" media="all" data-minify="1">
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="5 Best Mid Lane Champions in League of Legends Patch 10.19">
+<meta property="og:description" content="With the League of Legends Patch 10.19, there are quite a few changes taking place in the mid lane. Twisted Fate, Azir, Lucian, and Akali are getting their nerfs, which means that there will be">
+<meta property="og:image" content="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19.jpg">
+<meta property="og:url" content="https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/">
+<meta property="og:site_name" content="E Games Consult">
+<meta property="article:publisher" content="https://www.facebook.com/egamesconsult">
+<meta property="article:published_time" content="2020-09-15T12:04:43+01:00">
+<meta property="article:modified_time" content="2020-09-15T16:35:12+01:00">
+<meta property="og:updated_time" content="2020-09-15T16:35:12+01:00">
+
+
+<meta property="og:image:width" content="1215">
+<meta property="og:image:height" content="717">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="5 Best Mid Lane Champions in League of Legends Patch 10.19">
+<meta name="twitter:description" content="With the League of Legends Patch 10.19, there are quite a few changes taking place in the mid lane. Twisted Fate, Azir, Lucian, and Akali are getting their nerfs, which means that there will be">
+<meta name="twitter:image" content="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19.jpg">
+
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, height=device-height, width=device-width">
+
+<meta name="description" content="With the League of Legends Patch 10.19, there are a lot of changes taking place in the mid lane. Here are the 5 best mid laners in this patch">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/">
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://egamesconsult.com/#organization","name":"E Games Consult","url":"https://egamesconsult.com/","sameAs":["https://www.facebook.com/egamesconsult"],"logo":{"@type":"ImageObject","@id":"https://egamesconsult.com/#logo","inLanguage":"en-US","url":"/leagueoflegend/wp-content/uploads/2020/03/Logo-e1590533199335.png","width":287,"height":77,"caption":"E Games Consult"},"image":{"@id":"https://egamesconsult.com/#logo"}},{"@type":"WebSite","@id":"https://egamesconsult.com/#website","url":"https://egamesconsult.com/","name":"E Games Consult","inLanguage":"en-US","description":"League of Legends News, PBE News, Patch Notes","publisher":{"@id":"https://egamesconsult.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://egamesconsult.com/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"ImageObject","@id":"https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/#primaryimage","inLanguage":"en-US","url":"/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19.jpg","width":1215,"height":717,"caption":"Orianna's ultimate can change the outcome of teamfights. She can easily carry and win the game if she lands a perfect ultimate. This all makes her one of the best mid lane champs in League Patch 10.19"},{"@type":"WebPage","@id":"https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/#webpage","url":"https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/","name":"5 Best Mid Lane Champions in League of Legends Patch 10.19","isPartOf":{"@id":"https://egamesconsult.com/#website"},"inLanguage":"en-US","primaryImageOfPage":{"@id":"https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/#primaryimage"},"datePublished":"2020-09-15T11:04:43+00:00","dateModified":"2020-09-15T15:35:12+00:00","description":"With the League of Legends Patch 10.19, there are a lot of changes taking place in the mid lane. Here are the 5 best mid laners in this patch","potentialAction":[{"@type":"ReadAction","target":["https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/"]}]},{"@type":"NewsArticle","@id":"https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/#article","isPartOf":{"@id":"https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/#webpage"},"author":{"@id":"https://egamesconsult.com/#/schema/person/7011471ed79186361d40412a97f8cd11"},"headline":"5 Best Mid Lane Champions in League of Legends Patch 10.19","datePublished":"2020-09-15T11:04:43+00:00","dateModified":"2020-09-15T15:35:12+00:00","commentCount":2,"mainEntityOfPage":{"@id":"https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/#webpage"},"publisher":{"@id":"https://egamesconsult.com/#organization"},"image":{"@id":"https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/#primaryimage"},"articleSection":"League News","inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/#respond"]}],"copyrightYear":"2020","copyrightHolder":{"@id":"https://egamesconsult.com/#organization"}},{"@type":["Person"],"@id":"https://egamesconsult.com/#/schema/person/7011471ed79186361d40412a97f8cd11","name":"Davis","image":{"@type":"ImageObject","@id":"https://egamesconsult.com/#authorlogo","inLanguage":"en-US","url":"/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg","caption":"Davis"},"description":"My mission is to provide you with the newest and the most fun-to-read League of Legends News!","sameAs":["https://www.instagram.com/egamesconsult"]}]}</script>
+
+<link rel="dns-prefetch" href="//static.apester.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="E Games Consult » Feed" href="https://egamesconsult.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="E Games Consult » Comments Feed" href="https://egamesconsult.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="E Games Consult » 5 Best Mid Lane Champions in League of Legends Patch 10.19 Comments Feed" href="https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/feed/">
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="bimber-dynamic-style-css" href="https://egamesconsult.com/?bimber-dynamic-style=1" type="text/css" media="all">
+<script type='text/javascript' src='/leagueoflegend/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script type='text/javascript' id='mashsb-js-extra'>
+/* <![CDATA[ */
+var mashsb = {"shares":"0","round_shares":"1","animate_shares":"0","dynamic_buttons":"0","share_url":"https:\/\/egamesconsult.com\/5-best-mid-lane-champions-in-league-of-legends-patch-10-19\/","title":"5+Best+Mid+Lane+Champions+in+League+of+Legends+Patch+10.19","image":"https:\/\/egamesconsult.com\/wp-content\/uploads\/2020\/09\/5-best-mid-lane-champs-in-patch-10.19.jpg","desc":"With the League of Legends Patch 10.19, there are quite a few changes taking place in the mid lane. Twisted Fate, Azir, Lucian, and Akali are getting their nerfs, which means that there will be \u2026","hashtag":"","subscribe":"link","subscribe_url":"","activestatus":"1","singular":"1","twitter_popup":"1","refresh":"0","nonce":"02c42d1060","postid":"9028","servertime":"1603826693","ajaxurl":"https:\/\/egamesconsult.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script data-rocketlazyloadscript='data:text/javascript;base64,CiAgICAKCgoKICAgIHdpbmRvdy5nYSA9IHdpbmRvdy5nYSB8fCBmdW5jdGlvbiAoKSB7KGdhLnEgPSBnYS5xIHx8IFtdKS5wdXNoKGFyZ3VtZW50cyk7fTsKICAgIGdhLmwgPSArbmV3IERhdGU7CgogICAgZ2EoJ2NyZWF0ZScsICdVQS0xMjYyMDczMzAtNCcsIHsiY29va2llTmFtZSI6ImNhb3NMb2NhbEdhIiwiY29va2llRG9tYWluIjoibGVhZ3VlZmVlZC5uZXQiLCJjb29raWVFeHBpcmVzIjoyNTkyMDAwLCJjb29raWVGbGFncyI6InNhbWVzaXRlPW5vbmU7c2VjdXJlIn0pOwogICAgICAgICAgICBnYSgnc2VuZCcsICdwYWdldmlldycpOwogICAgICAgICAgICAgICAgCg==' type='text/javascript' id='caos-async-analytics-js-after'></script>
+<link rel="https://api.w.org/" href="https://egamesconsult.com/leagueoflegend/wp-json/"><link rel="alternate" type="application/json" href="https://egamesconsult.com/wp-json/wp/v2/posts/9028"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://egamesconsult.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/leagueoflegend/wp-includes/wlwmanifest.xml">
+<link rel="shortlink" href="https://egamesconsult.com/?p=9028">
+<link rel="alternate" type="application/json+oembed" href="https://egamesconsult.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fegamesconsult.com%2F5-best-mid-lane-champions-in-league-of-legends-patch-10-19%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://egamesconsult.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fegamesconsult.com%2F5-best-mid-lane-champions-in-league-of-legends-patch-10-19%2F&amp;format=xml">
+
+<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+<style>
+	@font-face {
+		font-family: "bimber";
+					src:url("/leagueoflegend/wp-content/themes/bimber/css/8.1/bunchy/fonts/bimber.eot");
+			src:url("/leagueoflegend/wp-content/themes/bimber/css/8.1/bunchy/fonts/bimber.eot?#iefix") format("embedded-opentype"),
+			url("/leagueoflegend/wp-content/themes/bimber/css/8.1/bunchy/fonts/bimber.woff") format("woff"),
+			url("/leagueoflegend/wp-content/themes/bimber/css/8.1/bunchy/fonts/bimber.ttf") format("truetype"),
+			url("/leagueoflegend/wp-content/themes/bimber/css/8.1/bunchy/fonts/bimber.svg#bimber") format("svg");
+						font-weight: normal;
+		font-style: normal;
+		font-display: block;
+	}
+	</style>
+
+<script data-rocketlazyloadscript='/leagueoflegend/wp-content/cache/busting/1/gtm-d6b9bc55880a3c592b1daa53798a2195.js' data-no-minify="1" async></script>
+<script data-rocketlazyloadscript='data:text/javascript;base64,DQogIHdpbmRvdy5kYXRhTGF5ZXIgPSB3aW5kb3cuZGF0YUxheWVyIHx8IFtdOw0KICBmdW5jdGlvbiBndGFnKCl7ZGF0YUxheWVyLnB1c2goYXJndW1lbnRzKTt9DQogIGd0YWcoJ2pzJywgbmV3IERhdGUoKSk7DQoNCiAgZ3RhZygnY29uZmlnJywgJ1VBLTEyNjIwNzMzMC00Jyk7DQo='></script>
+<link rel="icon" href="/src/assets/cropped-league-of-legends-logo-png-18-32x32.png" sizes="32x32">
+<link rel="icon" href="/src/assets/cropped-league-of-legends-logo-png-18-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/src/assets/cropped-league-of-legends-logo-png-18-180x180.png">
+<meta name="msapplication-TileImage" /src/assets/cropped-league-of-legends-logo-png-18-270x270.png>
+<meta name="g1:switch-skin-css" content="/leagueoflegend/wp-content/themes/bimber/css/8.1/styles/mode-dark.min.css"> <script>if("undefined"!=typeof localStorage){var skinItemId=document.getElementsByName("g1:skin-item-id");skinItemId=skinItemId.length>0?skinItemId[0].getAttribute("content"):"g1_skin",window.g1SwitchSkin=function(e,t){if(e){var n=document.getElementById("g1-switch-skin-css");if(n){n.parentNode.removeChild(n),document.documentElement.classList.remove("g1-skinmode");try{localStorage.removeItem(skinItemId)}catch(e){}}else{t?document.write('<link id="g1-switch-skin-css" rel="stylesheet" type="text/css" media="all" href="'+document.getElementsByName("g1:switch-skin-css")[0].getAttribute("content")+'" />'):((n=document.createElement("link")).id="g1-switch-skin-css",n.href=document.getElementsByName("g1:switch-skin-css")[0].getAttribute("content"),n.rel="stylesheet",n.media="all",document.head.appendChild(n)),document.documentElement.classList.add("g1-skinmode");try{localStorage.setItem(skinItemId,e)}catch(e){}}}};try{var mode=localStorage.getItem(skinItemId);window.g1SwitchSkin(mode,!0)}catch(e){}}</script>
+<script data-ezscrex="false" data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-161948505-15";</script>
+<script data-ezscrex="false" data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(function(){
+	_gat._createTracker('UA-161948505-15', 'e');
+});
+_gaq.push(function(){
+	_gat._createTracker('UA-38339005-1', 'f');
+});
+_gaq.push(['e._setDomainName', 'egamesconsult.com']);
+_gaq.push(['f._setDomainName', 'egamesconsult.com']);
+_gaq.push(['e._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['e._setCustomVar',2,'t','126',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod41-c',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['f._setCustomVar',2,'domain','egamesconsult.com',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "1";</script><base href="https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/"><script type='text/javascript'>
+var ezoTemplate = 'old_site_gc';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script>
+<script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 191368;
+var ezdomain = 'egamesconsult.com';
+var ezoicSearchable = 1;
+</script>
+
+
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":0,"ad_lazyload_version":0,"city":"Chicago","country":"US","days_since_last_visit":-1,"domain_id":191368,"engaged_time_visit":0,"ezcache_level":0,"forensiq_score":-1,"form_factor_id":1,"framework_id":1,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"metro_code":602,"page_ad_positions":"","page_view_count":0,"page_view_id":"53fb79ed-bce7-426c-7a6c-f3f23c549e5c","position_selection_id":0,"postal_code":"60618","pv_event_count":0,"response_time_orig":567,"serverid":"100.26.134.79:3404","state":"IL","t_epoch":1603853443,"template_id":126,"time_on_site_visit":0,"url":"https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/","user_id":0,"word_count":1953,"worst_bad_word_level":0};var _ezExtraQueries = "&ez_orig=1";</script><script data-ezscrex='false' data-cfasync='false' type="text/javascript" src="/detroitchicago/rochester.js?cb=191-0&v=9" async></script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_191368=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+}
+function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["53fb79ed-bce7-426c-7a6c-f3f23c549e5c", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script><!-- font awesome -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+<!-- style -->
+<link rel="stylesheet" href="/src/styles/index.css" />
+<link rel="stylesheet" href="/src/styles/header.css" />
+<link rel="stylesheet" href="/src/styles/footer.css" />
+<!-- header script  -->
+<script type="text/javascript" src="/src/scripts/header.js" async></script>
+
+</head>
+<body class="post-template-default single single-post postid-9028 single-format-standard wp-embed-responsive snax-hoverable g1-layout-stretched g1-hoverable g1-has-mobile-logo g1-sidebar-normal" itemscope="&quot;&quot;" itemtype="http://schema.org/WebPage">
+<div class="g1-body-inner">
+<div id="page">
+<aside class="g1-row g1-sharebar g1-sharebar-off">
+<div class="g1-row-inner">
+<div class="g1-column g1-sharebar-inner">
+</div>
+</div>
+<div class="g1-row-background">
+</div>
+</aside>
+<div class="g1-row g1-row-layout-page g1-hb-row g1-hb-row-normal g1-hb-row-a g1-hb-row-1 g1-hb-boxed g1-hb-sticky-off g1-hb-shadow-off">
+<div class="g1-row-inner">
+<div class="g1-column g1-dropable">
+<div class="g1-bin-1 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-left">
+</div>
+</div>
+<div class="g1-bin-2 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-center">
+</div>
+</div>
+<div class="g1-bin-3 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-right">
+</div>
+</div>
+</div>
+</div>
+<div class="g1-row-background"></div>
+</div>
+<div class="g1-row g1-row-layout-page g1-hb-row g1-hb-row-normal g1-hb-row-b g1-hb-row-2 g1-hb-boxed g1-hb-sticky-off g1-hb-shadow-off">
+<div class="g1-row-inner">
+<div class="g1-column g1-dropable">
+<div class="g1-bin-1 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-left">
+</div>
+</div>
+<div class="g1-bin-2 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-center">
+<div class="g1-id g1-id-desktop">
+<p class="g1-mega g1-mega-1st site-title">
+<a class="g1-logo-wrapper" href="https://egamesconsult.com/" rel="home">
+<picture class="g1-logo g1-logo-default">
+<source media="(min-width: 1025px)" srcset="https://www.egamesconsult.com/leagueoflegend/wp-content/uploads/2020/03/Logo.png 2x,https://www.egamesconsult.com/wp-content/uploads/2020/03/Logo-e1590533199335.png 1x">
+<source media="(max-width: 1024px)" srcset="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20287%2065%27%2F%3E">
+<img width="287" height="65" alt="E Games Consult" data-src="https://www.egamesconsult.com/wp-content/uploads/2020/03/Logo-e1590533199335.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img
+							src="https://www.egamesconsult.com/wp-content/uploads/2020/03/Logo-e1590533199335.png"
+							width="287"
+							height="65"
+							alt="E Games Consult" /></noscript>
+</picture>
+</a>
+</p>
+</div> </div>
+</div>
+<div class="g1-bin-3 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-right">
+</div>
+</div>
+</div>
+</div>
+<div class="g1-row-background"></div>
+</div>
+<div class="g1-sticky-top-wrapper g1-hb-row-3">
+<div class="g1-row g1-row-layout-page g1-hb-row g1-hb-row-normal g1-hb-row-c g1-hb-row-3 g1-hb-full g1-hb-sticky-on g1-hb-shadow-off">
+<div class="g1-row-inner">
+<div class="g1-column g1-dropable">
+<div class="g1-bin-1 g1-bin-grow-on">
+<div class="g1-bin g1-bin-align-left">
+<a class="g1-hamburger g1-hamburger-show g1-hamburger-m" href="#">
+<span class="g1-hamburger-icon"></span>
+<span class="g1-hamburger-label			g1-hamburger-label-hidden">Menu</span>
+</a>
+</div>
+</div>
+<div class="g1-bin-2 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-center">
+
+<nav id="g1-primary-nav" class="g1-primary-nav"><ul id="g1-primary-nav-menu" class="g1-primary-nav-menu g1-menu-h"><li id="menu-item-7366" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-g1-standard menu-item-7366"><a href="https://egamesconsult.com">Home</a></li>
+<li id="menu-item-5527" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-g1-standard menu-item-5527"><a href="https://egamesconsult.com/category/league-news/">League News</a></li>
+<li id="menu-item-5528" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-g1-standard menu-item-5528"><a href="https://egamesconsult.com/category/quizzes/">Quizzes</a></li>
+<li id="menu-item-7290" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-g1-standard menu-item-7290"><a href="https://egamesconsult.com/leagueoflegend/">Fun Facts</a></li>
+<li id="menu-item-8501" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-g1-standard menu-item-8501"><a href="https://egamesconsult.com/category/leagueoflegends-guides/">League Guides</a></li>
+<li id="menu-item-8719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-g1-standard menu-item-8719"><a href="https://egamesconsult.com/contact-us-2/">Contact us</a></li>
+</ul></nav>
+</div>
+</div>
+<div class="g1-bin-3 g1-bin-grow-on">
+<div class="g1-bin g1-bin-align-right">
+<div class="g1-drop g1-drop-nojs g1-drop-before g1-drop-the-skin g1-drop-the-skin-light g1-drop-l g1-drop-icon">
+<button class="g1-button-none g1-drop-toggle">
+<span class="g1-drop-toggle-icon"></span><span class="g1-drop-toggle-text">Switch skin</span>
+
+</button>
+<div class="g1-drop-content">
+<p class="g1-skinmode-desc">Switch to the dark mode that's kinder on your eyes at night time.</p>
+<p class="g1-skinmode-desc">Switch to the light mode that's kinder on your eyes at day time.</p>
+</div>
+</div>
+<div class="g1-drop g1-drop-before g1-drop-the-search  g1-drop-m g1-drop-icon">
+<a class="g1-drop-toggle" href="https://egamesconsult.com/?s=">
+<span class="g1-drop-toggle-icon"></span>
+
+</a>
+<div class="g1-drop-content">
+<div role="search" class="search-form-wrapper">
+<form method="get" class="g1-searchform-tpl-default search-form" action="https://egamesconsult.com/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+</label>
+<button class="search-submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="g1-row-background"></div>
+</div>
+</div>
+<div class="g1-row g1-row-layout-page g1-hb-row g1-hb-row-mobile g1-hb-row-a g1-hb-row-1 g1-hb-boxed g1-hb-sticky-off g1-hb-shadow-off">
+<div class="g1-row-inner">
+<div class="g1-column g1-dropable">
+<div class="g1-bin-1 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-left">
+</div>
+</div>
+<div class="g1-bin-2 g1-bin-grow-on">
+<div class="g1-bin g1-bin-align-center">
+<div class="g1-id g1-id-mobile">
+<p class="g1-mega g1-mega-1st site-title">
+<a class="g1-logo-wrapper" href="https://egamesconsult.com/" rel="home">
+<picture class="g1-logo g1-logo-default">
+<source media="(max-width: 1024px)" srcset="https://www.egamesconsult.com/leagueoflegend/wp-content/uploads/2020/03/Logo.png 2x,https://www.egamesconsult.com/wp-content/uploads/2020/03/Logo.png 1x">
+<source media="(min-width: 1025px)" srcset="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20287%2065%27%2F%3E">
+<img width="287" height="65" alt="E Games Consult" data-src="https://www.egamesconsult.com/wp-content/uploads/2020/03/Logo.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img
+						src="https://www.egamesconsult.com/wp-content/uploads/2020/03/Logo.png"
+						width="287"
+						height="65"
+						alt="E Games Consult" /></noscript>
+</picture>
+</a>
+</p>
+</div> <div class="g1-drop g1-drop-nojs g1-drop-before g1-drop-the-skin g1-drop-the-skin-light g1-drop-l g1-drop-icon">
+<button class="g1-button-none g1-drop-toggle">
+<span class="g1-drop-toggle-icon"></span><span class="g1-drop-toggle-text">Switch skin</span>
+
+</button>
+<div class="g1-drop-content">
+<p class="g1-skinmode-desc">Switch to the dark mode that's kinder on your eyes at night time.</p>
+<p class="g1-skinmode-desc">Switch to the light mode that's kinder on your eyes at day time.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="g1-bin-3 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-right">
+</div>
+</div>
+</div>
+</div>
+<div class="g1-row-background"></div>
+</div>
+<div class="g1-row g1-row-layout-page g1-hb-row g1-hb-row-mobile g1-hb-row-b g1-hb-row-2 g1-hb-boxed g1-hb-sticky-off g1-hb-shadow-off">
+<div class="g1-row-inner">
+<div class="g1-column g1-dropable">
+<div class="g1-bin-1 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-left">
+</div>
+</div>
+<div class="g1-bin-2 g1-bin-grow-on">
+<div class="g1-bin g1-bin-align-center">
+</div>
+</div>
+<div class="g1-bin-3 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-right">
+</div>
+</div>
+</div>
+</div>
+<div class="g1-row-background"></div>
+</div>
+<div class="g1-sticky-top-wrapper g1-hb-row-3">
+<div class="g1-row g1-row-layout-page g1-hb-row g1-hb-row-mobile g1-hb-row-c g1-hb-row-3 g1-hb-boxed g1-hb-sticky-on g1-hb-shadow-off">
+<div class="g1-row-inner">
+<div class="g1-column g1-dropable">
+<div class="g1-bin-1 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-left">
+<a class="g1-hamburger g1-hamburger-show g1-hamburger-m" href="#">
+<span class="g1-hamburger-icon"></span>
+<span class="g1-hamburger-label			g1-hamburger-label-hidden">Menu</span>
+</a>
+</div>
+</div>
+<div class="g1-bin-2 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-center">
+</div>
+</div>
+<div class="g1-bin-3 g1-bin-grow-off">
+<div class="g1-bin g1-bin-align-right">
+<div class="g1-drop g1-drop-before g1-drop-the-search  g1-drop-m g1-drop-icon">
+<a class="g1-drop-toggle" href="https://egamesconsult.com/?s=">
+<span class="g1-drop-toggle-icon"></span>
+
+</a>
+<div class="g1-drop-content">
+<div role="search" class="search-form-wrapper">
+<form method="get" class="g1-searchform-tpl-default search-form" action="https://egamesconsult.com/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+</label>
+<button class="search-submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="g1-row-background"></div>
+</div>
+</div>
+<div class="g1-row g1-row-padding-m g1-row-layout-page">
+<div class="g1-row-background">
+</div>
+<div class="g1-row-inner">
+<div class="g1-column g1-column-2of3" id="primary">
+<div id="content" role="main">
+<article id="post-9028" class="entry-tpl-classic post-9028 post type-post status-publish format-standard has-post-thumbnail category-league-news" itemscope="&quot;&quot;" itemtype="http://schema.org/Article">
+<div class="entry-inner">
+<header class="entry-header entry-header-01">
+<div class="entry-before-title">
+</div>
+<h1 class="g1-mega g1-mega-1st entry-title" itemprop="headline">5 Best Mid Lane Champions in League of Legends Patch 10.19</h1>
+<p class="g1-meta g1-meta-m entry-meta entry-meta-m">
+<span class="entry-byline entry-byline-m">
+<time class="entry-date" datetime="2020-09-15T12:04:43+01:00" itemprop="datePublished">September 15, 2020, 12:04</time> </span>
+<span class="entry-stats entry-stats-m">
+</span>
+</p>
+<aside class="mashsb-container mashsb-main mashsb-stretched mashsb-stretched"><div class="mashsb-box"><div class="mashsb-count" style="float:left;"></div><div class="mashsb-buttons"><a class="mashicon-facebook mash-center mashsb-noshadow" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fegamesconsult.com%2F5-best-mid-lane-champions-in-league-of-legends-patch-10-19%2F" target="_top" rel="nofollow"><span class="icon"></span></a><a class="mashicon-twitter mash-center mashsb-noshadow" href="https://twitter.com/intent/tweet?text=5%20Best%20Mid%20Lane%20Champions%20in%20League%20of%20Legends%20Patch%2010.19&amp;url=https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/" target="_top" rel="nofollow"><span class="icon"></span></a><div class="onoffswitch2 mashsb-noshadow" style="display:none;"></div></div></div>
+<div style="clear:both;"></div></aside>
+
+</header>
+<div class="entry-featured-media entry-featured-media-main" itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><div class="g1-frame"><div class="g1-frame-inner" style="padding-bottom: 58.97097625%;"><img width="758" height="447" alt="Orianna's ultimate can change the outcome of teamfights. She can easily carry and win the game if she lands a perfect ultimate. This all makes her one of the best mid lane champs in League Patch 10.19" loading="lazy" itemprop="contentUrl" data-srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-758x447.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-300x177.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1024x604.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-768x453.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-561x331.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1122x662.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-364x215.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-728x430.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-608x359.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1152x680.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-313x185.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19.jpg 1215w" data-src="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-758x447.jpg" data-sizes="(max-width: 758px) 100vw, 758px" class="attachment-bimber-grid-2of3 size-bimber-grid-2of3 wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="758" height="447" src="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-758x447.jpg" class="attachment-bimber-grid-2of3 size-bimber-grid-2of3 wp-post-image" alt="Orianna&#039;s ultimate can change the outcome of teamfights. She can easily carry and win the game if she lands a perfect ultimate. This all makes her one of the best mid lane champs in League Patch 10.19" loading="lazy" itemprop="contentUrl" srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-758x447.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-300x177.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1024x604.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-768x453.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-561x331.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1122x662.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-364x215.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-728x430.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-608x359.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1152x680.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-313x185.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19.jpg 1215w" sizes="(max-width: 758px) 100vw, 758px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></div><meta itemprop="url" content="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19.jpg"><meta itemprop="width" content="1215"><meta itemprop="height" content="717"></div>
+<div class="g1-content-narrow g1-typography-xl entry-content" itemprop="articleBody">
+<p>With the League of Legends Patch 10.19, there are quite a few changes taking place in the mid lane. Twisted Fate, Azir, Lucian, and Akali are getting their nerfs, which means that there will be some changes in the mid lane meta.&nbsp;</p>
+<p>Without further ado, here are the 5 best mid lane champions in League of Legends Patch 10.19.</p>
+<h2><strong>Yone</strong></h2>
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="576" alt="Yone is a newest champion in League of Legends, which means that not a lot of people have mastered him yet. You should really start playing Yone as he's very OP at the moment which makes him our #1 choice for the best mid lane champions in the current Patch 10.19 of League of Legends" data-srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1024x576.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-300x169.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-768x432.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1536x864.jpg 1536w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1122x631.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-608x342.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-758x426.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1152x648.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-313x176.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19.jpg 1500w" data-src="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1024x576.jpg" data-sizes="(max-width: 1024px) 100vw, 1024px" class="wp-image-9031 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img loading="lazy" width="1024" height="576" src="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1024x576.jpg" alt="Yone is a newest champion in League of Legends, which means that not a lot of people have mastered him yet. You should really start playing Yone as he's very OP at the moment which makes him our #1 choice for the best mid lane champions in the current Patch 10.19 of League of Legends" class="wp-image-9031" srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1024x576.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-300x169.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-768x432.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1536x864.jpg 1536w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1122x631.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-608x342.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-758x426.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-1152x648.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19-313x176.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-in-league-of-legends-patch-10.19.jpg 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+<p>Yone is a great champion – when he was alive, he was a renowned student of his village’s sword school and half-brother of Yasuo. However, he died at the hands of Yasuo, he became hunted by an evil entity from the spirit realm and had no choice other than to kill it with its own sword. Now, he is cursed with a demonic mask on his face, hunting such monsters so that he can gain an understanding of what he has been turned into.&nbsp;</p>
+<p>Despite it all, in League of Legends patch 10.19, Yone deserves his spot on the top 5 best mid lane champions. Many players haven’t figured out how to unlock this champions full potential, but take it from us, it’s there. His ultimate, called Fate Sealed, is super scary, and his burst damage is out of this world.&nbsp;</p>
+<p>Yone has the capabilities of ripping his soul right from his body, as his mortal form remains behind to navigate the spirit realm for a bit. In a match, this is his Soul Bound (E) ability. This is when he lets out an onslaught towards his enemies. During this time, he marks them with stored damage, and once he returns to his body, this will turn into true damage. Unlike LeBlanc and Zed, this champion doesn’t have a choice on when he returns to his body; once the timer ends, he automatically returns.</p>
+<iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube.com/embed/3SzAHWjOwYk" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe>
+<h3>List of Yone’s Abilities</h3>
+<p><strong>Passive – Way of the Hunter</strong>&nbsp;– With every second attack, this champion deals magic damage. Along with this, his chance of a critical strike is doubled.&nbsp;</p>
+<p><strong>Q – Mortal Steel</strong>&nbsp;– With this ability, Yone will sling forward, causing damage to all of the enemies in a line. On hit, a stack of Gathering Storm will be granted for a couple of seconds. Once he reaches two stacks, Mortal Steel sends Yone forward, causing the enemies to be Airborne.&nbsp;</p>
+<p><strong>W – Spirit Cleave</strong>&nbsp;– With spirit cleave, it cleaves forward, causing damage to the enemies in a cone. A shield will be granted to Yone, and the value will be increased by the number of champions that are hit with the swipe.</p>
+<p><strong>E – Soul Unbound</strong>&nbsp;– As Yone’s spirit leaves his body, he gains a decent amount of movement speed. Once this skill comes to an end, Yone’s spirit will return to his body and repeat a portion of his spirit’s damage.&nbsp;</p>
+<p><strong>R – Fate Sealed</strong>&nbsp;– With this ability, this top mid champion will be pulling enemies towards him.&nbsp;</p>
+<h2><strong>Zoe</strong></h2>
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="614" alt="Zoe is an ultimate assassin champion that can one-shot enemies in a blink of an eye. She's very underrated in low elo, but she does wonders once she's mastered" data-srcset="/leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1024x614.jpeg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-300x180.jpeg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-768x461.jpeg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1536x922.jpeg 1536w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-561x337.jpeg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1122x673.jpeg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-364x218.jpeg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-728x437.jpeg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-608x365.jpeg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-758x455.jpeg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1152x691.jpeg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-313x188.jpeg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19.jpeg 1500w" data-src="/leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1024x614.jpeg" data-sizes="(max-width: 1024px) 100vw, 1024px" class="wp-image-9032 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img loading="lazy" width="1024" height="614" src="/leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1024x614.jpeg" alt="Zoe is an ultimate assassin champion that can one-shot enemies in a blink of an eye. She's very underrated in low elo, but she does wonders once she's mastered" class="wp-image-9032" srcset="/leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1024x614.jpeg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-300x180.jpeg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-768x461.jpeg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1536x922.jpeg 1536w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-561x337.jpeg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1122x673.jpeg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-364x218.jpeg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-728x437.jpeg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-608x365.jpeg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-758x455.jpeg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-1152x691.jpeg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19-313x188.jpeg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-lane-champions-in-patch-10.19.jpeg 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+<p>While Zoe is a hard champion to get used to, her kit is so rewarding that it’d be insane not to list her as one of the best mid lane champions in League of Legends. It’s always fun to use her Sleepy Trouble Bubble (E) ability because her damage output is insane.</p>
+<p>As the embodiment of imagination, change, and mischief, this LoL champion is a cosmic messenger of Targon.&nbsp;</p>
+<h3>Zoe’s Abilities</h3>
+<p>Passive – More Sparkles – Because we need more sparkles in our lives! This is a basic attack after casting a spell that does an additional amount of magic damage.&nbsp;</p>
+<p>Q – Paddle Star – With this ability, Zoe will be firing a missile, and here’s the cool thing…she can redirect it in flight. The longer the missile flies in a straight line, the more damage it’s going to deal.&nbsp;</p>
+<p>W – Spell Thief – With this ability, this champion is able to pick up the remnants of enemy spells and cast them herself. Whenever Zoe casts a summoner spell, she will be granted three missiles directed towards her nearest target.&nbsp;</p>
+<p>E – Sleepy Trouble Bubble – This is a super fun ability. With Sleepy Trouble Bubble, Zoe’s target will become drowsy, causing it to fall asleep on the battleground.</p>
+<p>R – Portal Jump – With this ability, Zoe will blink to a nearby enemy.&nbsp;</p>
+<h2><strong>Akali</strong></h2>
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="576" alt="Even though she recently received a nerf, Akali is still one of the best mid lane champions in League of Legends Patch 10.19. Here's why:" data-srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1024x576.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-300x169.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-768x432.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1536x864.jpg 1536w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1122x631.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-608x342.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-758x426.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1152x648.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-313x176.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19.jpg 1500w" data-src="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1024x576.jpg" data-sizes="(max-width: 1024px) 100vw, 1024px" class="wp-image-9030 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img loading="lazy" width="1024" height="576" src="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1024x576.jpg" alt="Even though she recently received a nerf, Akali is still one of the best mid lane champions in League of Legends Patch 10.19. Here's why:" class="wp-image-9030" srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1024x576.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-300x169.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-768x432.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1536x864.jpg 1536w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1122x631.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-608x342.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-758x426.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-1152x648.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19-313x176.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-laners-for-patch-10.19.jpg 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+<p>Even though Akali went through a nerf, this isn’t going to change the fact that she’s one of the best mid lane champions in patch 10.19. Everything she knows, she learned from her master Shen and has taken the oath to defend <a href="https://universe.leagueoflegends.com/en_US/region/ionia/">Ionia</a> from the enemies, killing them one by one. She may strike her enemies in silence, but her message isn’t going to go unnoticed. One should fear the assassin (that’s Akali) with no master.</p>
+<iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube.com/embed/EOl9rumEqPA" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe>
+<h3>A Look at Akali’s Abilities</h3>
+<p>Passive – Assassin’s Mark – With Assassin’s Mark, Akali will be dealing spell damage to an enemy champion – this surrounds them with a ring of energy. Once they have exited the ring, her next auto attack will come with bonus damage and range.</p>
+<p>Q – Five Point Strike – With this ability, the champion will toss out five kunai, which will deal damage based on Akali’s bonus Attack Damage and her Ability Power and slowing.</p>
+<p>W – Twilight Shroud – When you use Akali’s Twilight Shroud, the champion will gain a brief increase in Movement Speed as she drops a cover of smoke. During this time, since she is invisible, enemies won’t be able to select her for their enemy spells or attacks. Using abilities or attacking will briefly reveal Akali.&nbsp;</p>
+<p>E – Shuriken Flip – Using Shuriken Flip will cause the champion to flip forward, and during this time, she will deal magic damage.&nbsp;</p>
+<p>R – Perfect Execution – With Perfect Execution, it’s exactly how it sounds – perfect. This will cause the champion to leap, causing damage to any enemies she comes in contact with.&nbsp;</p>
+<div class="apester-media" data-media-id="5f5e89887704cce8236bb7b9"></div>
+<h2><strong>Orianna</strong></h2>
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="604" alt="Orianna's ultimate can change the outcome of teamfights. She can easily carry and win the game if she lands a perfect ultimate. This all makes her one of the best mid lane champs in League Patch 10.19" data-srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1024x604.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-300x177.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-768x453.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-561x331.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1122x662.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-364x215.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-728x430.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-608x359.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-758x447.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1152x680.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-313x185.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19.jpg 1215w" data-src="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1024x604.jpg" data-sizes="(max-width: 1024px) 100vw, 1024px" class="wp-image-9029 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img loading="lazy" width="1024" height="604" src="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1024x604.jpg" alt="Orianna's ultimate can change the outcome of teamfights. She can easily carry and win the game if she lands a perfect ultimate. This all makes her one of the best mid lane champs in League Patch 10.19" class="wp-image-9029" srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1024x604.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-300x177.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-768x453.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-561x331.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1122x662.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-364x215.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-728x430.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-608x359.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-758x447.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-1152x680.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19-313x185.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-best-mid-lane-champs-in-patch-10.19.jpg 1215w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+<p>Patch 10.19 puts Orianna in such a good place. Her terrain control with the ball comes in handy, and I must say, overall, she’s a fun champion to play. Once, Orianna was a curious girl of flesh and blood, but now, she’s a technological marvel. After an accident, her body failed her, and that’s when it was replaced piece by piece with exquisite artifice.&nbsp;</p>
+<h3>A Look at Orianna’s Abilities</h3>
+<p>Passive – Clockwork Windup – With Clockwork Windup, Orianna can deal additional magic damage to her enemies. The more she attacks a target, the more the damage increases.&nbsp;</p>
+<p>Q – Command: Attack – With this ability, she sends her ball toward a location of her choice, dealing magic damage to those along the way.&nbsp;</p>
+<p>W – Command: Dissonance – This is where she commands her energy ball towards a target location, dealing magic to enemies around it. This also slows enemies and adds speed to the allies.</p>
+<p>E – Command: Protect – Orianna’s ball will attach to an allied champion of her choice. It deals magic damage to the enemies it passes along the way and once’s it’s attached, it shields the allied champion. In addition, it grants an additional magic resist and armor to the champion it has attached to.</p>
+<p>R – Command: Shockwave – Her ball will release a shockwave with this ability. It flies towards nearby enemies and deals magic damage.&nbsp;</p>
+<p>Playing Orianna can be a little bit tricky, so here’s the <a href="https://www.op.gg/champion/orianna/statistics/mid">best build for Orianna</a></p>
+<h2><strong>Annie&nbsp;</strong></h2>
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="604" alt="Annie looks cute and innocent, but once she's in the mid lane, everybody gets scared of her. She has a stun and great AoE damage, which makes her one of the strongest mid lane champions in Patch 10.19" data-srcset="/leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-1024x604.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-300x177.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-768x453.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-561x331.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-1122x662.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-364x215.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-728x430.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-608x359.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-758x447.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-1152x680.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-313x185.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19.jpg 1215w" data-src="/leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-1024x604.jpg" data-sizes="(max-width: 1024px) 100vw, 1024px" class="wp-image-9033 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img loading="lazy" width="1024" height="604" src="/leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-1024x604.jpg" alt="Annie looks cute and innocent, but once she's in the mid lane, everybody gets scared of her. She has a stun and great AoE damage, which makes her one of the strongest mid lane champions in Patch 10.19" class="wp-image-9033" srcset="/leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-1024x604.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-300x177.jpg 300w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-768x453.jpg 768w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-561x331.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-1122x662.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-364x215.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-728x430.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-608x359.jpg 608w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-758x447.jpg 758w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-1152x680.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19-313x185.jpg 313w, /leagueoflegend/wp-content/uploads/2020/09/5-strongest-mid-laners-10.19.jpg 1215w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+<p>Last on our list; we have a favorite champion of many, Annie. Annie is one of the highest mid-laners with a win rate of around 54 percent. She’s super fun to use and has some pretty cool abilities, which we will discuss. Don’t let Annie’s precious look get the best of you because she’s very dangerous under all of that. Annie is a child mage with strong pyromantic power. Her natural fire affinity started in her early life through emotional outbursts, and she eventually learned how to control it. Her favorite would be the ability to summon a cute teddy bear. Lost in her childhood innocence, she searches in dark forests and is always on the lookout for someone fun to spend time with.</p>
+<h3>Annie’s Abilities</h3>
+<p>Passive – Pyromania – After casting four spells, her next offensive spell will keep the target in his/her spot with a stun.&nbsp;</p>
+<p>Q – Disintegrate – With this ability, she tosses a fireball infused with mana. This fireball deals damage, and if it destroys the target, it will refund the mana cost.&nbsp;</p>
+<p>W – Incinerate – Annie tosses a blazing ball of fire, causing damage to the enemies around it.&nbsp;</p>
+<p>E – Molten Shield – With the Molten Shield ability, Annie will be given a burst of Movement Speed, an increased percentage Damage Reduction, and enemies who are attacking her with basic attacks will be damaged.&nbsp;</p>
+<p>R – Summon: Tibbers – Having the ability to summon Tibbers, a teddy bear, is one of the things that makes Annie fun to play on. It’s neat watching this bear come to life and deal damage. Tibbers has the capabilities of attacking and burning enemies that are near him.</p>
+<p><strong>Final Word</strong></p>
+<p>Annie, Orianna, Akali, Zoe, and Yone are the five best mid lane champions in League of Legends patch 10.19. If you’re looking to own the battlefield, and you’re playing mid-lane, go ahead and choose one of these champions from this list.&nbsp;</p>
+<figure class="wp-block-image size-large"><a href="https://egamesconsult.com/5-best-bot-lane-duos-in-league-of-legends-patch-10-10/"><img loading="lazy" width="800" height="100" alt="" data-srcset="/leagueoflegend/wp-content/uploads/2020/09/NEXT_.png 800w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-300x38.png 300w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-768x96.png 768w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-561x70.png 561w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-364x46.png 364w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-728x91.png 728w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-608x76.png 608w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-758x95.png 758w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-313x39.png 313w" data-src="/leagueoflegend/wp-content/uploads/2020/09/NEXT_.png" data-sizes="(max-width: 800px) 100vw, 800px" class="wp-image-9034 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img loading="lazy" width="800" height="100" src="/leagueoflegend/wp-content/uploads/2020/09/NEXT_.png" alt="" class="wp-image-9034" srcset="/leagueoflegend/wp-content/uploads/2020/09/NEXT_.png 800w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-300x38.png 300w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-768x96.png 768w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-561x70.png 561w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-364x46.png 364w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-728x91.png 728w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-608x76.png 608w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-758x95.png 758w, /leagueoflegend/wp-content/uploads/2020/09/NEXT_-313x39.png 313w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></a></figure>
+<br><div class="apester-media" data-random="5ed25e951071ea056d069a19" data-context="true" data-fallback="true"></div>
+<div class="snax snax-post-container">
+</div>
+</div>
+</div>
+<aside class="g1-more-from">
+<h2 class="g1-delta g1-delta-2nd g1-collection-title"><span>More From: <a href="https://egamesconsult.com/category/league-news/">League News</a></span></h2> <div class="g1-collection">
+<div class="g1-collection-viewport">
+<ul class="g1-collection-items">
+<li class="g1-collection-item">
+<article class="entry-tpl-list post-8437 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="How To Show Ping &amp; FPS In League of Legends?" class="g1-frame" href="https://egamesconsult.com/how-to-show-ping-in-league-of-legends/"><div class="g1-frame-inner" style="padding-bottom: 56.31868132%;"><img width="364" height="205" alt="A lot of players are being irritated by a hidden ping option enabled in their settings, which they've probably clicked on by a mistake. Here's how to display ping in League so you don't have to worry about that anymore" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-364x205.png 364w, /leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-192x108.png 192w, /leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-384x216.png 384w" data-src="/leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-364x205.png" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="205" src="/leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-364x205.png" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image" alt="A lot of players are being irritated by a hidden ping option enabled in their settings, which they&#039;ve probably clicked on by a mistake. Here&#039;s how to display ping in League so you don&#039;t have to worry about that anymore" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-364x205.png 364w, /leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-192x108.png 192w, /leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-384x216.png 384w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+<p class="entry-meta entry-stats g1-meta g1-meta g1-current-background"><span class="entry-shares"><strong>0</strong><span> Shares</span></span></p>
+</div>
+<h3 class="g1-gamma g1-gamma-1st entry-title"><a href="https://egamesconsult.com/how-to-show-ping-in-league-of-legends/" rel="bookmark">How To Show Ping &amp; FPS In League of Legends?</a></h3>
+</header>
+<footer>
+<p class="g1-meta entry-meta entry-byline entry-byline-with-avatar">
+<span class="entry-author">
+<span class="entry-meta-label">by</span>
+<a href="https://egamesconsult.com/author/admin/" title="Posts by Davis" rel="author">
+<img width="30" height="30" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30" src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" class="avatar avatar-30 photo" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" sizes="(max-width: 30px) 100vw, 30px" /></noscript>
+<strong>Davis</strong>
+</a>
+</span>
+<time class="entry-date" datetime="2020-10-26T00:26:00+01:00">October 26, 2020, 00:26</time> </p>
+</footer>
+<div class="entry-todome g1-dropable snax">
+<p class="entry-ctas">
+<a class="entry-cta g1-button g1-button-simple g1-button-s" href="https://egamesconsult.com/how-to-show-ping-in-league-of-legends/">
+Read More </a>
+</p>
+</div>
+</div>
+</article>
+</li>
+<li class="g1-collection-item">
+<article class="entry-tpl-list post-9485 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="Riot plans to rework Udyr “very soon”" class="g1-frame" href="https://egamesconsult.com/riot-plans-to-rework-udyr-very-soon/"><div class="g1-frame-inner" style="padding-bottom: 56.31868132%;"><img width="364" height="205" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-1122x631.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-758x426.jpg 758w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-1152x648.jpg 1152w" data-src="/leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-364x205.jpg" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="205" src="/leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-364x205.jpg" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-1122x631.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-758x426.jpg 758w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-1152x648.jpg 1152w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+<p class="entry-meta entry-stats g1-meta g1-meta g1-current-background"><span class="entry-shares"><strong>0</strong><span> Shares</span></span></p>
+</div>
+<h3 class="g1-gamma g1-gamma-1st entry-title"><a href="https://egamesconsult.com/riot-plans-to-rework-udyr-very-soon/" rel="bookmark">Riot plans to rework Udyr “very soon”</a></h3>
+</header>
+<footer>
+<p class="g1-meta entry-meta entry-byline entry-byline-with-avatar">
+<span class="entry-author">
+<span class="entry-meta-label">by</span>
+<a href="https://egamesconsult.com/author/admin/" title="Posts by Davis" rel="author">
+<img width="30" height="30" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30" src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" class="avatar avatar-30 photo" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" sizes="(max-width: 30px) 100vw, 30px" /></noscript>
+<strong>Davis</strong>
+</a>
+</span>
+<time class="entry-date" datetime="2020-10-25T13:09:00+01:00">October 25, 2020, 13:09</time> </p>
+</footer>
+<div class="entry-todome g1-dropable snax">
+<p class="entry-ctas">
+<a class="entry-cta g1-button g1-button-simple g1-button-s" href="https://egamesconsult.com/riot-plans-to-rework-udyr-very-soon/">
+Read More </a>
+</p>
+</div>
+</div>
+</article>
+</li>
+<li class="g1-collection-item">
+<article class="entry-tpl-list post-9470 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="When Does Ranked Season 10 End?" class="g1-frame" href="https://egamesconsult.com/when-does-ranked-season-10-end/"><div class="g1-frame-inner" style="padding-bottom: 56.31868132%;"><img width="364" height="205" alt="League of Legends Season 10 is soon coming to an end. We will say goodbye to Season 10 on 10th of November, 2020." loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/10/01-Header-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-300x169.jpg 300w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-1024x576.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-768x432.jpg 768w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-1536x864.jpg 1536w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-2048x1152.jpg 2048w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-1122x631.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-608x342.jpg 608w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-758x426.jpg 758w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-1152x648.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-313x176.jpg 313w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-scaled.jpg 1500w" data-src="/leagueoflegend/wp-content/uploads/2020/10/01-Header-364x205.jpg" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="205" src="/leagueoflegend/wp-content/uploads/2020/10/01-Header-364x205.jpg" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image" alt="League of Legends Season 10 is soon coming to an end. We will say goodbye to Season 10 on 10th of November, 2020." loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/10/01-Header-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-300x169.jpg 300w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-1024x576.jpg 1024w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-768x432.jpg 768w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-1536x864.jpg 1536w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-2048x1152.jpg 2048w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-1122x631.jpg 1122w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-608x342.jpg 608w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-758x426.jpg 758w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-1152x648.jpg 1152w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-313x176.jpg 313w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-scaled.jpg 1500w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+<p class="entry-meta entry-stats g1-meta g1-meta g1-current-background"><span class="entry-shares"><strong>0</strong><span> Shares</span></span></p>
+</div>
+<h3 class="g1-gamma g1-gamma-1st entry-title"><a href="https://egamesconsult.com/when-does-ranked-season-10-end/" rel="bookmark">When Does Ranked Season 10 End?</a></h3>
+</header>
+<footer>
+<p class="g1-meta entry-meta entry-byline entry-byline-with-avatar">
+<span class="entry-author">
+<span class="entry-meta-label">by</span>
+<a href="https://egamesconsult.com/author/admin/" title="Posts by Davis" rel="author">
+<img width="30" height="30" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30" src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" class="avatar avatar-30 photo" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" sizes="(max-width: 30px) 100vw, 30px" /></noscript>
+<strong>Davis</strong>
+</a>
+</span>
+<time class="entry-date" datetime="2020-10-22T22:24:44+01:00">October 22, 2020, 22:24</time> </p>
+</footer>
+<div class="entry-todome g1-dropable snax">
+<p class="entry-ctas">
+<a class="entry-cta g1-button g1-button-simple g1-button-s" href="https://egamesconsult.com/when-does-ranked-season-10-end/">
+Read More </a>
+</p>
+</div>
+</div>
+</article>
+</li>
+<li class="g1-collection-item">
+<article class="entry-tpl-list post-8869 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="5 Best Off-Meta Supports in Season 10 (Updated)" class="g1-frame" href="https://egamesconsult.com/leagueoflegend/5-best-off-meta-supports-in-season-10/"><div class="g1-frame-inner" style="padding-bottom: 56.31868132%;"><img width="364" height="205" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-758x426.jpg 758w" data-src="/leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-364x205.jpg" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="205" src="/leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-364x205.jpg" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-364x205.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-192x108.jpg 192w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-384x216.jpg 384w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-728x409.jpg 728w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-561x316.jpg 561w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-758x426.jpg 758w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+<p class="entry-meta entry-stats g1-meta g1-meta g1-current-background"><span class="entry-shares"><strong>0</strong><span> Shares</span></span></p>
+</div>
+<h3 class="g1-gamma g1-gamma-1st entry-title"><a href="https://egamesconsult.com/leagueoflegend/5-best-off-meta-supports-in-season-10/" rel="bookmark">5 Best Off-Meta Supports in Season 10 (Updated)</a></h3>
+</header>
+<footer>
+<p class="g1-meta entry-meta entry-byline entry-byline-with-avatar">
+<span class="entry-author">
+<span class="entry-meta-label">by</span>
+<a href="https://egamesconsult.com/author/admin/" title="Posts by Davis" rel="author">
+<img width="30" height="30" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30" src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" class="avatar avatar-30 photo" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" sizes="(max-width: 30px) 100vw, 30px" /></noscript>
+<strong>Davis</strong>
+</a>
+</span>
+<time class="entry-date" datetime="2020-10-17T12:49:00+01:00">October 17, 2020, 12:49</time> </p>
+</footer>
+<div class="entry-todome g1-dropable snax">
+<p class="entry-ctas">
+<a class="entry-cta g1-button g1-button-simple g1-button-s" href="https://egamesconsult.com/leagueoflegend/5-best-off-meta-supports-in-season-10/">
+Read More </a>
+</p>
+</div>
+</div>
+</article>
+</li>
+<li class="g1-collection-item">
+<article class="entry-tpl-list post-9364 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="Project L:  Riot’s Entry Into The World Of Fighting Games" class="g1-frame" href="https://egamesconsult.com/project-l-riots-entry-into-the-world-of-fighting-games/"><div class="g1-frame-inner" style="padding-bottom: 56.31868132%;"><img width="364" height="205" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-364x205.png 364w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-192x108.png 192w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-384x216.png 384w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-728x409.png 728w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-561x316.png 561w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-1122x631.png 1122w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-758x426.png 758w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-1152x648.png 1152w" data-src="/leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-364x205.png" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="205" src="/leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-364x205.png" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-364x205.png 364w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-192x108.png 192w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-384x216.png 384w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-728x409.png 728w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-561x316.png 561w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-1122x631.png 1122w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-758x426.png 758w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-1152x648.png 1152w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+<p class="entry-meta entry-stats g1-meta g1-meta g1-current-background"><span class="entry-shares"><strong>0</strong><span> Shares</span></span></p>
+</div>
+<h3 class="g1-gamma g1-gamma-1st entry-title"><a href="https://egamesconsult.com/project-l-riots-entry-into-the-world-of-fighting-games/" rel="bookmark">Project L: Riot’s Entry Into The World Of Fighting Games</a></h3>
+</header>
+<footer>
+<p class="g1-meta entry-meta entry-byline entry-byline-with-avatar">
+<span class="entry-author">
+<span class="entry-meta-label">by</span>
+<a href="https://egamesconsult.com/author/admin/" title="Posts by Davis" rel="author">
+<img width="30" height="30" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30" src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" class="avatar avatar-30 photo" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" sizes="(max-width: 30px) 100vw, 30px" /></noscript>
+<strong>Davis</strong>
+</a>
+</span>
+<time class="entry-date" datetime="2020-10-12T11:14:48+01:00">October 12, 2020, 11:14</time> </p>
+</footer>
+<div class="entry-todome g1-dropable snax">
+<p class="entry-ctas">
+<a class="entry-cta g1-button g1-button-simple g1-button-s" href="https://egamesconsult.com/project-l-riots-entry-into-the-world-of-fighting-games/">
+Read More </a>
+</p>
+</div>
+</div>
+</article>
+</li>
+<li class="g1-collection-item">
+<article class="entry-tpl-list post-9320 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="Riot Games Explains Why They Will Never Add Ranked Mode for ARAM" class="g1-frame" href="https://egamesconsult.com/riot-games-explains-why-they-will-never-add-ranked-mode-for-aram/"><div class="g1-frame-inner" style="padding-bottom: 56.31868132%;"><img width="364" height="205" alt="A lot of players would love to see the ranked mode on ARAM, but Riot Games have said that they don't planned to implement the ranked mode on ARAM, for now." loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-364x205.png 364w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-192x108.png 192w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-384x216.png 384w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-728x409.png 728w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-561x316.png 561w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-758x426.png 758w" data-src="/leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-364x205.png" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="205" src="/leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-364x205.png" class="attachment-bimber-list-standard size-bimber-list-standard wp-post-image" alt="A lot of players would love to see the ranked mode on ARAM, but Riot Games have said that they don&#039;t planned to implement the ranked mode on ARAM, for now." loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-364x205.png 364w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-192x108.png 192w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-384x216.png 384w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-728x409.png 728w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-561x316.png 561w, /leagueoflegend/wp-content/uploads/2020/10/HOW-TO-CHANGE-LEAGUE-OF-LEGENDS-LANGUAGE-1-758x426.png 758w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+<p class="entry-meta entry-stats g1-meta g1-meta g1-current-background"><span class="entry-shares"><strong>0</strong><span> Shares</span></span></p>
+</div>
+<h3 class="g1-gamma g1-gamma-1st entry-title"><a href="https://egamesconsult.com/riot-games-explains-why-they-will-never-add-ranked-mode-for-aram/" rel="bookmark">Riot Games Explains Why They Will Never Add Ranked Mode for ARAM</a></h3>
+</header>
+<footer>
+<p class="g1-meta entry-meta entry-byline entry-byline-with-avatar">
+<span class="entry-author">
+<span class="entry-meta-label">by</span>
+<a href="https://egamesconsult.com/author/admin/" title="Posts by Davis" rel="author">
+<img width="30" height="30" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30"   alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w"  data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" data-sizes="(max-width: 30px) 100vw, 30px" class="avatar avatar-30 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="30" height="30" src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg" class="avatar avatar-30 photo" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w" sizes="(max-width: 30px) 100vw, 30px" /></noscript>
+<strong>Davis</strong>
+</a>
+</span>
+<time class="entry-date" datetime="2020-10-07T14:38:19+01:00">October 7, 2020, 14:38</time> </p>
+</footer>
+<div class="entry-todome g1-dropable snax">
+<p class="entry-ctas">
+<a class="entry-cta g1-button g1-button-simple g1-button-s" href="https://egamesconsult.com/riot-games-explains-why-they-will-never-add-ranked-mode-for-aram/">
+Read More </a>
+</p>
+</div>
+</div>
+</article>
+</li>
+</ul>
+</div>
+</div>
+</aside>
+<section class="g1-row author-info" itemscope="" itemtype="http://schema.org/Person">
+<div class="g1-row-inner author-info-inner">
+<div class="g1-column author-overview">
+<figure class="author-avatar">
+<a href="https://egamesconsult.com/author/admin/">
+<img width="80" height="80" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w" data-src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg" data-sizes="(max-width: 80px) 100vw, 80px" class="avatar avatar-80 photo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="80" height="80" src="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg" class="avatar avatar-80 photo" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-96x96.jpg 96w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-300x300.jpg 300w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-150x150.jpg 150w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-192x192.jpg 192w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-110x110.jpg 110w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-220x220.jpg 220w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n.jpg 320w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-311x311.jpg 311w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-313x313.jpg 313w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-24x24.jpg 24w, /leagueoflegend/wp-content/uploads/2020/06/74627687_568170987058165_7976182064594550784_n-48x48.jpg 48w" sizes="(max-width: 80px) 100vw, 80px" /></noscript>
+</a>
+</figure>
+<header>
+<h2 class="g1-gamma g1-gamma-1st author-title">Written by <a href="https://egamesconsult.com/author/admin/"><span itemprop="name">Davis</span></a></h2>
+</header>
+<div itemprop="description" class="author-bio">
+<p>My mission is to provide you with the newest and the most fun-to-read League of Legends News!</p>
+</div>
+<div class="author-extras">
+</div>
+</div>
+</div>
+</section>
+<meta itemprop="mainEntityOfPage" content="https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/">
+<meta itemprop="dateModified" content="2020-09-15T16:35:12">
+<span itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+<meta itemprop="name" content="E Games Consult">
+<meta itemprop="url" content="https://egamesconsult.com">
+<span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+<meta itemprop="url" content="https://www.egamesconsult.com/wp-content/uploads/2020/03/Logo-e1590533199335.png">
+</span>
+</span>
+<span class="entry-author" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+<meta itemprop="name" content="Davis">
+</span>
+</article>
+</div>
+</div>
+<div id="secondary" class="g1-sidebar g1-sidebar-padded g1-column g1-column-1of3">
+<aside id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget">
+<div id="mmt-5789087c-836e-48a7-8b1b-b342766c3ea8"></div>
+</div></aside><aside id="bimber_widget_posts-5" class="widget widget_bimber_widget_posts"><header><h2 class="g1-delta g1-delta-2nd widgettitle"><span>Our picks</span></h2></header> <div id="g1-widget-posts-1" class="g1-widget-posts">
+<div class="g1-collection g1-collection-columns-1">
+<div class="g1-collection-viewport">
+<ul class="g1-collection-items">
+<li class="g1-collection-item">
+<article class="entry-tpl-grid-fancy post-8437 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="How To Show Ping &amp; FPS In League of Legends?" class="g1-frame" href="https://egamesconsult.com/how-to-show-ping-in-league-of-legends/"><div class="g1-frame-inner" style="padding-bottom: 42.85714286%;"><img width="364" height="156" alt="A lot of players are being irritated by a hidden ping option enabled in their settings, which they've probably clicked on by a mistake. Here's how to display ping in League so you don't have to worry about that anymore" loading="lazy" data-src="/leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-364x156.png" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="156" src="/leagueoflegend/wp-content/uploads/2020/07/Screenshot_2-364x156.png" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image" alt="A lot of players are being irritated by a hidden ping option enabled in their settings, which they&#039;ve probably clicked on by a mistake. Here&#039;s how to display ping in League so you don&#039;t have to worry about that anymore" loading="lazy" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-counter"></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+</div>
+<h3 class="g1-delta g1-delta-1st entry-title"><a href="https://egamesconsult.com/how-to-show-ping-in-league-of-legends/" rel="bookmark">How To Show Ping &amp; FPS In League of Legends?</a></h3> </header>
+</div>
+</article>
+</li>
+<li class="g1-collection-item">
+<article class="entry-tpl-grid-fancy post-9485 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="Riot plans to rework Udyr “very soon”" class="g1-frame" href="https://egamesconsult.com/riot-plans-to-rework-udyr-very-soon/"><div class="g1-frame-inner" style="padding-bottom: 42.85714286%;"><img width="364" height="156" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-364x156.jpg 364w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-728x312.jpg 728w" data-src="/leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-364x156.jpg" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="156" src="/leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-364x156.jpg" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-364x156.jpg 364w, /leagueoflegend/wp-content/uploads/2020/10/laurits-rask-god-dyr-udyr-splash-art-jpg-728x312.jpg 728w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-counter"></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+</div>
+<h3 class="g1-delta g1-delta-1st entry-title"><a href="https://egamesconsult.com/riot-plans-to-rework-udyr-very-soon/" rel="bookmark">Riot plans to rework Udyr “very soon”</a></h3> </header>
+</div>
+</article>
+</li>
+<li class="g1-collection-item">
+<article class="entry-tpl-grid-fancy post-9470 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="When Does Ranked Season 10 End?" class="g1-frame" href="https://egamesconsult.com/when-does-ranked-season-10-end/"><div class="g1-frame-inner" style="padding-bottom: 42.85714286%;"><img width="364" height="156" alt="League of Legends Season 10 is soon coming to an end. We will say goodbye to Season 10 on 10th of November, 2020." loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/10/01-Header-364x156.jpg 364w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-728x312.jpg 728w" data-src="/leagueoflegend/wp-content/uploads/2020/10/01-Header-364x156.jpg" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="156" src="/leagueoflegend/wp-content/uploads/2020/10/01-Header-364x156.jpg" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image" alt="League of Legends Season 10 is soon coming to an end. We will say goodbye to Season 10 on 10th of November, 2020." loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/10/01-Header-364x156.jpg 364w, /leagueoflegend/wp-content/uploads/2020/10/01-Header-728x312.jpg 728w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-counter"></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+</div>
+<h3 class="g1-delta g1-delta-1st entry-title"><a href="https://egamesconsult.com/when-does-ranked-season-10-end/" rel="bookmark">When Does Ranked Season 10 End?</a></h3> </header>
+</div>
+</article>
+</li>
+<li class="g1-collection-item">
+<article class="entry-tpl-grid-fancy post-8869 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="5 Best Off-Meta Supports in Season 10 (Updated)" class="g1-frame" href="https://egamesconsult.com/leagueoflegend/5-best-off-meta-supports-in-season-10/"><div class="g1-frame-inner" style="padding-bottom: 42.85714286%;"><img width="364" height="156" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-364x156.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-728x312.jpg 728w" data-src="/leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-364x156.jpg" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="156" src="/leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-364x156.jpg" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-364x156.jpg 364w, /leagueoflegend/wp-content/uploads/2020/09/5-best-off-meta-supports-728x312.jpg 728w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-counter"></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+</div>
+<h3 class="g1-delta g1-delta-1st entry-title"><a href="https://egamesconsult.com/leagueoflegend/5-best-off-meta-supports-in-season-10/" rel="bookmark">5 Best Off-Meta Supports in Season 10 (Updated)</a></h3> </header>
+</div>
+</article>
+</li>
+<li class="g1-collection-item">
+<article class="entry-tpl-grid-fancy post-9364 post type-post status-publish format-standard has-post-thumbnail category-league-news">
+<div class="entry-featured-media"><a title="Project L:  Riot’s Entry Into The World Of Fighting Games" class="g1-frame" href="https://egamesconsult.com/project-l-riots-entry-into-the-world-of-fighting-games/"><div class="g1-frame-inner" style="padding-bottom: 42.85714286%;"><img width="364" height="156" alt="" loading="lazy" data-srcset="/leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-364x156.png 364w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-728x312.png 728w" data-src="/leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-364x156.png" data-sizes="(max-width: 364px) 100vw, 364px" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="364" height="156" src="/leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-364x156.png" class="attachment-bimber-grid-fancy size-bimber-grid-fancy wp-post-image" alt="" loading="lazy" srcset="/leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-364x156.png 364w, /leagueoflegend/wp-content/uploads/2020/10/Slika-zaslona-2020-10-12-u-12.11.04-728x312.png 728w" sizes="(max-width: 364px) 100vw, 364px" /></noscript><span class="g1-frame-icon g1-frame-icon-"></span></div></a></div>
+<div class="entry-counter"></div>
+<div class="entry-body">
+<header class="entry-header">
+<div class="entry-before-title">
+</div>
+<h3 class="g1-delta g1-delta-1st entry-title"><a href="https://egamesconsult.com/project-l-riots-entry-into-the-world-of-fighting-games/" rel="bookmark">Project L: Riot’s Entry Into The World Of Fighting Games</a></h3> </header>
+</div>
+</article>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</aside><aside id="custom_html-5" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget">
+<div id="mmt-47a65750-727b-4e4f-8cda-504e766f572c"></div>
+</div></aside><aside id="custom_html-6" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget">
+<div id="mmt-cef3af45-b39c-4dc9-b236-0c2a146cb45c"></div>
+</div></aside></div>
+</div>
+</div>
+<div class="g1-footer g1-row g1-row-layout-page">
+<div class="g1-row-inner">
+<div class="g1-column">
+<p class="g1-footer-text">© by E Games Consult</p>
+</div>
+</div>
+<div class="g1-row-background">
+</div>
+</div>
+<a href="#page" class="g1-back-to-top">Back to Top</a>
+</div>
+<div class="g1-canvas-overlay">
+</div>
+</div>
+<div id="g1-breakpoint-desktop">
+</div>
+<div class="g1-canvas g1-canvas-global g1-canvas-no-js">
+<div class="g1-canvas-inner">
+<div class="g1-canvas-content">
+<a class="g1-canvas-toggle" href="#">Close</a>
+<div role="search" class="search-form-wrapper">
+<form method="get" class="g1-searchform-tpl-default search-form" action="https://egamesconsult.com/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+</label>
+<button class="search-submit">Search</button>
+</form>
+</div>
+
+<nav id="g1-canvas-primary-nav" class="g1-primary-nav"><ul id="g1-canvas-primary-nav-menu" class="g1-primary-nav-menu g1-menu-v"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-g1-standard menu-item-7366"><a href="https://egamesconsult.com">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-g1-standard menu-item-5527"><a href="https://egamesconsult.com/category/league-news/">League News</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-g1-standard menu-item-5528"><a href="https://egamesconsult.com/category/quizzes/">Quizzes</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-g1-standard menu-item-7290"><a href="https://egamesconsult.com/leagueoflegend/">Fun Facts</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-g1-standard menu-item-8501"><a href="https://egamesconsult.com/category/leagueoflegends-guides/">League Guides</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-g1-standard menu-item-8719"><a href="https://egamesconsult.com/contact-us-2/">Contact us</a></li>
+</ul></nav> 
+<nav class="g1-quick-nav g1-quick-nav-short">
+<ul class="g1-quick-nav-menu g1-menu g1-menu-v g1-menu-with-icons">
+<li class="menu-item menu-item-type-g1-latest">
+<a href="https://egamesconsult.com">
+<span class="entry-flag entry-flag-latest"></span>
+Latest </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="g1-canvas-background">
+</div>
+</div>
+</div>
+<div id="snax-popup-content" class="snax white-popup mfp-hide">
+<div class="snax-login-tab snax-tab-active">
+<h2 class="g1-alpha">Log In</h2>
+<h4 class="snax-form-legend snax-form-legend-sign-in">Sign In</h4>
+<div class="snax-login-form">
+<form name="loginform-in-popup" id="loginform-in-popup" action="https://egamesconsult.com/wp-login.php" method="post">
+<div class="snax-validation-error snax-login-error-message"></div>
+<p class="login-username">
+<label for="user_login">Username or Email Address</label>
+<input type="text" name="log" id="user_login" class="input" value="" size="20">
+</p>
+<p class="login-password">
+<label for="user_pass">Password</label>
+<input type="password" name="pwd" id="user_pass" class="input" value="" size="20">
+</p>
+<div id="snax-login-recaptcha"></div>
+<p class="login-submit">
+<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In">
+<input type="hidden" name="redirect_to" value="https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/">
+</p>
+</form> </div>
+<a class="snax-link-forgot-pass" href="https://egamesconsult.com/?snax_login_popup=forgot_password">Forgot password?</a>
+</div>
+<div class="snax-forgot-pass-tab snax-tab-inactive">
+<h2 class="g1-alpha g1-alpha-2nd">Forgot password?</h2>
+<p>
+Enter your account data and we will send you a link to reset your password.	</p>
+<div class="snax-forgot-pass-form">
+<form name="lostpasswordform" id="lostpasswordform" action="https://egamesconsult.com/wp-login.php?action=lostpassword" method="post">
+<div class="snax-validation-error snax-forgot-pass-error-message"></div>
+<div class="snax-validation-error snax-forgot-pass-success-message"></div>
+<p class="forgot-username">
+<label for="user_login">Username or Email Address</label>
+<input type="text" name="user_login" id="forgot-user_login" class="input" value="" size="20" placeholder="Username or Email Address">
+</p>
+<input type="hidden" name="redirect_to" value="https://egamesconsult.com/5-best-mid-lane-champions-in-league-of-legends-patch-10-19/">
+<p class="forgot-submit">
+<input type="submit" name="wp-submit" id="forgot-wp-submit" class="button button-primary button-large" value="Reset Password">
+</p>
+<a href="#" class="snax-back-to-login-tab">Back to Login</a>
+</form>
+</div>
+</div>
+<div class="snax-reset-tab snax-tab-inactive">
+<div class="snax-reset-pass-form">
+<h2>Your password reset link appears to be invalid or expired.</h2>
+</div>
+</div>
+<div class="snax-gdpr-tab snax-tab-inactive">
+<h2 class="g1-alpha">Log in</h2>
+<h3 class="g1-delta">Privacy Policy</h3>
+<p> To use social login you have to agree with the storage and handling of your data by this website. %privacy_policy%</p>
+<a class="g1-button g1-button-l g1-button-wide g1-button-solid snax-login-gdpr-accept" href="#">Accept</a>
+</div>
+</div>
+<div class="snax snax-notifications snax-notifications-off">
+<div class="snax-notification">
+<button class="snax-notification-close">Close</button>
+<p class="snax-notification-text"></p>
+</div>
+</div><div id="snax-popup-add-to-collection" class="snax white-popup mfp-hide">
+<h2>Add to Collection</h2>
+<div class="snax-add-to-collection">
+<form class="snax-form-collection-search">
+<label>
+Add new or search <input name="snax-collection-search" type="search" placeholder="Add new…" autocomplete="off">
+</label>
+<input name="snax-collection-save" type="submit" value="Save" disabled="disabled">
+</form>
+<div class="snax-collections snax-collections-tpl-listxs">
+<ul class="snax-collections-items">
+<li class="snax-collections-item">
+<div class="snax-collection snax-collection-tpl-listxs snax-collection-public">
+<p class="snax-collection-title"><a>Public collection title</a></p>
+</div>
+</li>
+<li class="snax-collections-item">
+<div class="snax-collection snax-collection-tpl-listxs snax-collection-private">
+<p class="snax-collection-title"><a>Private collection title</a></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="snax-collections-leading">
+<div class="snax-collections-leading-icon"></div>
+<h3 class="snax-collections-leading-title">No Collections</h3>
+<p>Here you'll find all collections you've created before.</p>
+</div>
+</div>
+</div>
+<script type='text/javascript' id='snax-collections-js-extra'>
+/* <![CDATA[ */
+var snax_collections_js_config = "{\"ajax_url\":\"https:\\\/\\\/egamesconsult.com\\\/wp-admin\\\/admin-ajax.php\",\"home_url\":\"https:\\\/\\\/egamesconsult.com\",\"user_id\":0,\"post_id\":9028,\"nonce\":\"4f1ae0e462\",\"history\":\"off\",\"i18n\":{\"are_you_sure_remove\":\"Entire collection with all items will be removed. Proceed?\",\"are_you_sure_clear_all\":\"All collection items will be removed. Proceed?\",\"removed\":\"Collection has been successfully removed\",\"removing_items\":\"Removing collection items...\"}}";
+/* ]]> */
+</script>
+<script src="/leagueoflegend/wp-content/cache/min/1/a284505271766e2defdbdd24b5d72cce.js" data-minify="1" defer></script>
+<script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.php', '/detroitchicago/edmonton.webp?a=a&cb=0&shcb=34', true, ['/detroitchicago/minneapolis.js'], true, false, false, false);
+__ez.queue.addFile('jellyfish.php', '/porpoiseant/jellyfish.webp?a=a&cb=0&shcb=34', false, [], true, false, false, false);
+</script>
+<script>var _audins_dom="E Games Consult_net",_audins_did=191368;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezoic.net/detroitchicago/audins.js?cb=191-0");</script><noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.E Games Consult_net,DomainId.191368" border="0" height="1" width="1" alt="Quantcast"/></div></noscript><noscript><img src="https://sb.scorecardresearch.com/p?c1=2&c2=20015427&cv=2.0&cj=1"/></noscript>
+<script type='text/javascript' data-cfasync='false'></script></body></html>
