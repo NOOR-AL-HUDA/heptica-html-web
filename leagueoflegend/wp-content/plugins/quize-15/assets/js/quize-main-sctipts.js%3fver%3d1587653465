@@ -1,0 +1,82 @@
+// JavaScript Document
+jQuery(document).ready(function ($) {
+
+    var qz_answers = $('.quiz_answer-inner-label').text();
+
+    $('#qz-form').submit(function () {
+        checked = $("input.quizopt:checked").length;
+        if (!checked) {
+             alert($('#qz-alert-msg').val());
+            return false;
+        } else {
+          $('input.qz-btn-general').attr('disabled', 'disabled');
+        }
+
+    });
+
+    /* Facebook app for sharing */
+    if ($('.qz-social-share').length) {
+        var fb_appid = $('.qz-social-share').attr('data-fb-appid');
+        $.ajaxSetup({cache: true});
+        $.getScript('https://connect.facebook.net/en_US/sdk.js', function () {
+            FB.init({
+                appId: fb_appid,
+                version: 'v2.1' // or v2.1, v2.2, v2.3, ...
+            });
+            $('#loginbutton,#feedbutton').removeAttr('disabled');
+            FB.getLoginStatus(updateStatusCallback);
+        });
+    }
+
+    $('.qz-share-fb button').click(function (e) {
+        e.preventDefault();
+        // Define og:vars
+        var url = $(this).attr('data-url');
+        var title = $(this).attr('data-title');
+        var description = $(this).attr('data-description');
+        FB.ui(
+                {
+                    method: 'share',
+                    display: 'popup',
+                    quote: title + ' ' + description,
+                    href: url
+                },
+                function (response) {
+                    // your code to manage the response
+                });
+    });
+
+    /* Twitter sharing */
+    $('.qz-social-share').on('click', '.qz-share-tw button', function (e)
+    {
+        var url = $(this).attr('data-url');
+        var title = $(this).attr('data-title');
+        var description = $(this).attr('data-description');
+
+        var tweet = title + ' - ' + description;
+        var mention = $(this).attr('data-mention');
+        var hashtag = $(this).attr('data-hashtag');
+
+        window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(tweet), '', 'left=0,top=0,width=600,height=300,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+
+
+    });
+    $(".quiz_answer").click(function (e) {
+        e.preventDefault();
+        var quizopt = $(this).find('.quizopt');
+        if (quizopt.attr('type') == 'radio') {
+            $(this).find('.quizopt').attr('checked', 'checked');
+            $(".quiz_answer").removeClass('selected-li');
+            $(this).addClass('selected-li');
+
+        } else if (quizopt.attr('type') == 'checkbox') {
+            if ($(this).find('.quizopt:checked').length) {
+                $(this).find('.quizopt').removeAttr('checked');
+                $(this).removeClass('selected-li');
+            } else {
+                $(this).find('.quizopt').attr('checked', true);
+                $(this).addClass('selected-li');
+            }
+        }
+    });
+});

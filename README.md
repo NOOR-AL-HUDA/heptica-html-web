@@ -1,2 +1,2 @@
-# heptica-html-web
-html css practice project
+# gamerAuthority
+games information website

@@ -1,0 +1,1 @@
+(function($){$(document).ready(function(){$('body').on('visualizer:format:chart',function(event,data){customize_format(data.id,data.data,data.column);});});function customize_format($id,$data,$column){}})(jQuery);
